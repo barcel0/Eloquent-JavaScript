@@ -1,47 +1,21 @@
 :next_link: 01_values
 :load_files: ["code/intro.js"]
 
-= Introduction =
+= Introducción =
 
-This is a book about getting ((computer))s to do what you want them to
-do. Computers are about as common as screwdrivers today, but they contain a
-lot more hidden complexity and thus are harder to operate and
-understand. To many, they remain alien, slightly threatening things.
+Este es un libro sobre como hacer que los ((ordenadores)) hagan lo que quieres que hagan. Hoy en día, los ordenadores son tan comunes como los destornilladores, solo que contienen mucha complejidad oculta, lo que hace mas difíciles trabajar con ellos y entenderlos. Para muchos, son como alienigenas, ligeramente intimidades.
 
 image::img/generated/computer.png[alt="Communicating with a computer"]
 
-(((graphical user interface)))We've found two effective ways of
-bridging the communication gap between us, squishy biological
-organisms with a talent for social and spatial reasoning, and 
-computers, unfeeling manipulators of meaningless data. The first is to
-appeal to our sense of the physical world and build interfaces that
-mimic that world and allow us to manipulate shapes on a screen with
-our fingers. This works very well for casual machine interaction.
+(((graphical user interface)))Hemos encontrado dos maneras efectivas de salvar el hueco de comunicación entre nosotros, squishy organismos biológicos, y los ordenadores, manipuladores de información sin sentimientos. La primera es apelar a nuestro sentido del mundo físico y a partir de ahi, construir interfaces que mimeticen ese mundo, permitiéndonos manipular formas en una pantalla con nuestros dedos. Esto resulta funcionar muy bien para interacciones casuales con ordenadores.
 
-(((programming language)))But we have not yet found a good way to use
-the point-and-click approach to communicate things to the computer
-that the designer of the interface did not anticipate. For open-ended
-interfaces, such as instructing the computer to perform arbitrary
-tasks, we've had more luck with an approach that makes use of our
-talent for language: teaching the machine a language.
+(((programming language)))Sin embargo, aun no hemos encontrado una buena manera de usar este enfoque de “point-and-click” para comunicarle cosas al ordenador que el diseñador de la interfaz no haya anticipado. Para open-ended interfaces, como darles instrucciones al ordenador para realizar tareas arbitrarias, hemos tenido algo mas de suerte con un enfoque que hace uso de nuestro talento para el lenguaje: enseñar al ordenador un lenguaje.
 
-(((human language)))(((expressivity)))Human languages allow words and
-phrases to be combined in many ways, which allows us to say
-many different things. Computer languages, though typically less
-grammatically flexible, follow a similar principle.
+(((human language)))(((expressivity)))Los lenguajes humanos permiten combinar palabras y frases de multiples maneras, permitiendo decir diferentes cosas. Los lenguajes de los ordenadores, aunque gramaticalmente son menos flexibles, siguen un principio similar.
 
-(((JavaScript,availability of)))(((casual computing)))Casual computing
-has become much more widespread in the past 20 years, and
-language-based interfaces, which once were the default way in which
-people interacted with computers, have largely been replaced with
-graphical interfaces. But they are still there, if you know where to
-look. One such language, JavaScript, is built into almost every
-web ((browser)) and is thus available on just about every consumer
-device.
+(((JavaScript,availability of)))(((casual computing)))El uso cotidiano de los ordenadores, se ha incrementado potencialmente en los últimos 20 años, y las interfaces basadas en código, que antiguamente eran la principal manera de interactuar con los ordenadores, han sido reemplazadas en su mayoría por interfaces gráficos. Pero aun están ahi, si sabes donde mirar. Uno de estos lenguajes, JavaScript, se encuentra integrado hoy en día en casi cualquier ((navegador)) y, por consiguiente, en casi cualquier dispositivo.
 
-indexsee:[web browser,browser]This book intends to make you familiar
-enough with this language to be able to make a computer do what you
-want.
+indexsee:[web browser,browser]La intención de este libro es familiarizarte lo suficiente con este lenguaje de programación como para que seas capaz de hacer que el ordenador haga lo que tu quieras que haga.
 
 == On programming ==
 
@@ -54,68 +28,30 @@ cannot come back to me with the other three, I should not go over the
 points again.
 ____
 
-(((programming,difficulty of)))Besides explaining JavaScript, I also
-will introduce the basic principles of programming. Programming, it
-turns out, is hard. The fundamental rules are typically simple and
-clear. But programs built on top of these rules tend to become complex
-enough to introduce their own rules and complexity. You're building
-your own maze, in a way, and you might just get lost in it.
+(((programming,difficulty of)))Ademas de explicar JavaScript, este libro también introduce principios básicos de programación. Resulta que programar es duro. Las reglas fundamentales son por lo general simples y claras. Pero los programas, construidos sobre estas reglas básicas, tienden a complicarse lo suficiente como para tener sus propias reglas y complejidad. En cierto modo, estas construyendo tu propio laberinto, y podrías perderte en el si te descuidas.
 
-(((learning)))There will be times when reading this book feels terribly
-frustrating. If you are new to programming, there will be a lot of new
-material to digest. Much of this material will then be _combined_ in
-ways that require you to make additional connections.
+(((learning)))Habrá momentos en los que seguir este libro sera tremendamente frustrante. Si eres nuevo en la programación, te encontrarás con mucho material nuevo que digerir. Gran parte de este material se entremezclará de forma que tendrás que ser tu el que haga conexiones entre los diferentes conceptos con el fin de comprenderlo todo.
 
-It is up to you to make the necessary effort. When you are struggling
-to follow the book, do not jump to any conclusions about your own
-capabilities. You are fine—you just need to keep at it. Take a break,
-reread some material, and _always_ make sure you read and understand
-the example programs and ((exercises)). Learning is hard work, but
-everything you learn is yours and will make subsequent learning
-easier.
+Es cosa tuya hacer el esfuerzo necesario. Cuando tengas problemas para seguir el libro, no saltes directamente a conclusiones precipitadas sobre tus propias aptitudes. Vas por buen camino — solo tienes que insistir. Haz un descanso, relee cosas, y siempre te claro que has entendido bien los programas ejemplo y los ejercicios antes de continuar. Aprender es un trabajo duro, pero todo lo que aprendas sumara y para mas fácil aprender lo siguiente.
 
 [quote, Joseph Weizenbaum, Computer Power and Human Reason]
 ____
-(((Weizenbaum+++,+++ Joseph)))The computer programmer is a creator of
-universes for which he [sic] alone is responsible. Universes of virtually
-unlimited complexity can be created in the form of computer programs.
+(((Weizenbaum+++,+++ Joseph)))El programador informatico es un creador de universos de los cuales el es el único responsable. Universos de complejidad virtual ilimitada pueden ser creados en forma de programas informáticos.
 ____
 
-(((program,nature of)))(((data)))A program is many things. It is a
-piece of text typed by a programmer, it is the directing force that
-makes the computer do what it does, it is data in the computer's
-memory, yet it controls the actions performed on this same memory.
-Analogies that try to compare programs to objects we are familiar with
-tend to fall short. A superficially fitting one is that of a
-machine—lots of separate parts tend to be involved, and to make the
-whole thing tick, we have to consider the ways in which these parts
-interconnect and contribute to the operation of the whole.
+(((program,nature of)))(((data)))Un programa es muchas cosas. Es un trozo de texto escrito por un programador, es la fuerza directriz que hace al ordenador hacer lo que hace, es información en la memoria del ordenador, al mismo tiempo que controla las acciones realizadas en este mismo espacio en la memoria. Por lo general, las analogías que comparan programas con objetos físicos con los que estamos familiarizados suelen quedarse un poco cortas. Una que se aproxima de manera algo superficial, seria aquella que compara el programa con una maquina, donde las distintas piezas que la componen, interconectadas entre si, contribuyen a realizar juntas la función para la que la maquina ha sido creada.
 
-(((computer)))A computer is a machine built to act as a host for these
-immaterial machines. Computers themselves can do only stupidly
-straightforward things. The reason they are so useful is that they do
-these things at an incredibly high speed. A program can ingeniously
-combine an enormous number of these simple actions in order to do very
-complicated things.
+(((computer)))Siguiendo con esta analogía, un ordenador es una maquina construida para albergar estas maquinas inmateriales. Por si mismo, los ordenadores solo pueden realizar tareas tremendamente básicas. La razón por la que resultan tan útiles, es por que son capaces de realizar estas simples tareas a una velocidad increíblemente rápida. Un programa es capaz de combinar ingeniosamente una enorme cantidad de estas acciones simples con el fin de poder realizar tareas mas complejas.
 
 (((programming,joy of)))To some of us, writing computer programs is a
 fascinating game. A program is a building of thought. It is costless
 to build, it is weightless, and it grows easily under our typing
 hands.
 
-But without care, a program's size and ((complexity)) will grow out of
-control, confusing even the person who created it. Keeping programs
-under control is the main problem of programming. When a program
-works, it is beautiful. The art of programming is the skill of
-controlling complexity. The great program is subdued—made simple in
-its complexity.
+Para algunos de nosotros, programar es un juego fascinante. Un programa es una obra de pensamiento. No cuesta nada construirlo, no pesa y tienen la capacidad de crecer rápidamente bajo nuestros dedos mientras tecleamos.
+Sin embargo, si no se tiene cuidado, su tama;o y complejidad se pueden descontrolar si no se tiene cuidado, confundiendo incluso a su creador. Mantener los programas bajo control es el principal problema de la programación. Cuando un programa funciona, es algo bello. El arte de programar es el arte de controlar la complejidad. El buen programa es sutil — simple en su complejidad.
 
-(((programming style)))(((best practices)))Many programmers believe
-that this complexity is best managed by using only a small set of
-well-understood techniques in their programs. They have composed
-strict rules (“best practices”) prescribing the form programs should
-have, and the more zealous among them will consider those who go
-outside of this safe little zone to be _bad_ programmers.
+(((programming style)))(((best practices)))Muchos programadores creen que esta complejidad se maneja mejor usando unicamente un reducido grupo de tecnicas bien conocidas. Han compuesto una serie de reglas estrictas ("Mejores habitos"), predefiniendo la forma que los programas deben tener. Los mas entusiastas de esta estas reglas, incluso llegan a considerar a aquellos que no siguen estas normas como malos programadores.
 
 (((experiment)))(((learning)))What hostility to the richness of
 programming—to try to reduce it to something straightforward and
